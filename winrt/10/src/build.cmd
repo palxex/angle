@@ -1,0 +1,8 @@
+msbuild /m angle.sln /p:Configuation="Debug" /p:Platform="Win32"
+msbuild /m angle.sln /p:Configuation="Debug" /p:Platform="x64"
+msbuild /m angle.sln /p:Configuation="Debug" /p:Platform="ARM"
+msbuild /m angle.sln /p:Configuation="Debug" /p:Platform="ARM64"
+msbuild /m angle.sln /p:Configuation="Release" /p:Platform="Win32"
+msbuild /m angle.sln /p:Configuation="Release" /p:Platform="x64"
+msbuild /m angle.sln /p:Configuation="Release" /p:Platform="ARM"
+msbuild /m angle.sln /p:Configuation="Release" /p:Platform="ARM64"

@@ -1,0 +1,62 @@
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>ANGLE.WindowsStore.SDLPal</id>
+        <version>2.1.14</version>
+        <title>SDLPal's fork of ANGLE for Windows Store (UWP)</title>
+        <authors>Google &amp; Microsoft &amp; the Servo team &amp; the SDLPal team</authors>
+        <owners>palxex</owners>
+        <description>Runs OpenGL ES content on Windows by translating OpenGL ES API calls to DirectX 11 API calls.
+Targets Universal Windows 10 apps (UWP). </description>
+        <projectUrl>http://github.com/microsoft/angle/wiki</projectUrl>
+        <license type="file">LICENSE</license>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <copyright>Copyright (C) 2002-2013 The ANGLE Project Authors. Portions Copyright (C) Microsoft Corporation.</copyright>
+        <tags>OpenGL ES GLES GLSL Direct3D graphics 3D</tags>
+    </metadata>
+
+    <files>
+      <!-- UAP -->
+      <file src="..\winrt\10\src\$configuration$_Win32\libEGL.dll" target="bin\UAP\Win32" />
+      <file src="..\winrt\10\src\$configuration$_Win32\libEGL.pdb" target="bin\UAP\Win32" />
+      <file src="..\winrt\10\src\$configuration$_Win32\libGLESv2.dll" target="bin\UAP\Win32" />
+      <file src="..\winrt\10\src\$configuration$_Win32\libGLESv2.pdb" target="bin\UAP\Win32" />
+      <file src="..\winrt\10\src\$configuration$_Win32\lib\libEGL.lib" target="bin\UAP\Win32\libEGL.lib" />
+      <file src="..\winrt\10\src\$configuration$_Win32\lib\libGLESv2.lib" target="bin\UAP\Win32\libGLESv2.lib" />
+
+      <file src="..\winrt\10\src\$configuration$_x64\libEGL.dll" target="bin\UAP\x64" />
+      <file src="..\winrt\10\src\$configuration$_x64\libEGL.pdb" target="bin\UAP\x64" />
+      <file src="..\winrt\10\src\$configuration$_x64\libGLESv2.dll" target="bin\UAP\x64" />
+      <file src="..\winrt\10\src\$configuration$_x64\libGLESv2.pdb" target="bin\UAP\x64" />
+      <file src="..\winrt\10\src\$configuration$_x64\lib\libEGL.lib" target="bin\UAP\x64\libEGL.lib" />
+      <file src="..\winrt\10\src\$configuration$_x64\lib\libGLESv2.lib" target="bin\UAP\x64\libGLESv2.lib" />
+
+      <file src="..\winrt\10\src\$configuration$_ARM\libEGL.dll" target="bin\UAP\ARM" />
+      <file src="..\winrt\10\src\$configuration$_ARM\libEGL.pdb" target="bin\UAP\ARM" />
+      <file src="..\winrt\10\src\$configuration$_ARM\libGLESv2.dll" target="bin\UAP\ARM" />
+      <file src="..\winrt\10\src\$configuration$_ARM\libGLESv2.pdb" target="bin\UAP\ARM" />
+      <file src="..\winrt\10\src\$configuration$_ARM\lib\libEGL.lib" target="bin\UAP\ARM\libEGL.lib" />
+      <file src="..\winrt\10\src\$configuration$_ARM\lib\libGLESv2.lib" target="bin\UAP\ARM\libGLESv2.lib" />
+
+      <file src="..\winrt\10\src\$configuration$_ARM64\libEGL.dll" target="bin\UAP\ARM64" />
+      <file src="..\winrt\10\src\$configuration$_ARM64\libEGL.pdb" target="bin\UAP\ARM64" />
+      <file src="..\winrt\10\src\$configuration$_ARM64\libGLESv2.dll" target="bin\UAP\ARM64" />
+      <file src="..\winrt\10\src\$configuration$_ARM64\libGLESv2.pdb" target="bin\UAP\ARM64" />
+      <file src="..\winrt\10\src\$configuration$_ARM64\lib\libEGL.lib" target="bin\UAP\ARM64\libEGL.lib" />
+      <file src="..\winrt\10\src\$configuration$_ARM64\lib\libGLESv2.lib" target="bin\UAP\ARM64\libGLESv2.lib" />
+
+      <!-- Headers -->
+      <file src="..\include\**\*.h" target="include" />
+      <file src="..\include\**\*.inc" target="include" />
+
+      <!-- Source files -->
+      <file src="..\src\**\*.cpp" target="src" />
+
+      <!-- Build scripts -->
+      <file src="ANGLE.WindowsStore.SDLPal.targets" target="build\native" />
+
+      <!-- Other files -->
+      <file src="..\AUTHORS" />
+      <file src="..\CONTRIBUTORS" />
+      <file src="..\LICENSE" />
+    </files>
+</package>
