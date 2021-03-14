@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27428.2005
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "angle_common", "angle_common.vcxproj", "{7E3E300C-E43E-45E3-7AFE-6C728B705A32}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -96,8 +96,8 @@ Global
 		{3240FA08-8359-D699-DB1F-5292950787BD}.Debug|Win32.Build.0 = Debug|Win32
 		{3240FA08-8359-D699-DB1F-5292950787BD}.Debug|x64.ActiveCfg = Debug|x64
 		{3240FA08-8359-D699-DB1F-5292950787BD}.Debug|x64.Build.0 = Debug|x64
-		{3240FA08-8359-D699-DB1F-5292950787BD}.Release|ARM.ActiveCfg = Release|ARM
-		{3240FA08-8359-D699-DB1F-5292950787BD}.Release|ARM.Build.0 = Release|ARM
+		{3240FA08-8359-D699-DB1F-5292950787BD}.Release|ARM.ActiveCfg = Release|ARM64
+		{3240FA08-8359-D699-DB1F-5292950787BD}.Release|ARM.Build.0 = Release|ARM64
 		{3240FA08-8359-D699-DB1F-5292950787BD}.Release|ARM64.ActiveCfg = Release|ARM64
 		{3240FA08-8359-D699-DB1F-5292950787BD}.Release|ARM64.Build.0 = Release|ARM64
 		{3240FA08-8359-D699-DB1F-5292950787BD}.Release|Win32.ActiveCfg = Release|Win32

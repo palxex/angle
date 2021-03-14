@@ -40,7 +40,7 @@
     <RootNamespace>preprocessor</RootNamespace>
     <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
     <PreferredToolArchitecture>x64</PreferredToolArchitecture>
-    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <WindowsTargetPlatformMinVersion>10.0.14393.0</WindowsTargetPlatformMinVersion>
     <DefaultLanguage>en-US</DefaultLanguage>
     <AppContainerApplication>true</AppContainerApplication>
@@ -48,20 +48,20 @@
     <ApplicationType>Windows Store</ApplicationType>
     <WindowsSDKDesktopARMSupport>true</WindowsSDKDesktopARMSupport>
   </PropertyGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props"/>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
   </PropertyGroup>
   <PropertyGroup Label="Locals">
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props"/>
-  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props"/>
-  <ImportGroup Label="ExtensionSettings"/>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  <ImportGroup Label="ExtensionSettings" />
   <ImportGroup Label="PropertySheets">
-    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props"/>
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
   </ImportGroup>
-  <PropertyGroup Label="UserMacros"/>
+  <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <ExecutablePath>$(ExecutablePath);$(MSBuildProjectDirectory)\..\..\..\third_party\cygwin\bin\;$(MSBuildProjectDirectory)\..\..\..\third_party\python_26\</ExecutablePath>
     <OutDir>$(SolutionDir)$(Configuration)_$(Platform)\</OutDir>
@@ -96,6 +96,7 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <TreatWarningAsError>true</TreatWarningAsError>
       <WarningLevel>Level4</WarningLevel>
+      <ControlFlowGuard>Guard</ControlFlowGuard>
     </ClCompile>
     <Lib>
       <OutputFile>$(OutDir)lib\$(ProjectName)$(TargetExt)</OutputFile>
@@ -139,6 +140,7 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <TreatWarningAsError>true</TreatWarningAsError>
       <WarningLevel>Level4</WarningLevel>
+      <ControlFlowGuard>Guard</ControlFlowGuard>
     </ClCompile>
     <Lib>
       <OutputFile>$(OutDir)lib\$(ProjectName)$(TargetExt)</OutputFile>
@@ -182,6 +184,7 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <TreatWarningAsError>true</TreatWarningAsError>
       <WarningLevel>Level4</WarningLevel>
+      <ControlFlowGuard>Guard</ControlFlowGuard>
     </ClCompile>
     <Lib>
       <OutputFile>$(OutDir)lib\$(ProjectName)$(TargetExt)</OutputFile>
@@ -226,6 +229,7 @@
       <TreatWarningAsError>true</TreatWarningAsError>
       <WarningLevel>Level4</WarningLevel>
       <WholeProgramOptimization>true</WholeProgramOptimization>
+      <ControlFlowGuard>Guard</ControlFlowGuard>
     </ClCompile>
     <Lib>
       <OutputFile>$(OutDir)lib\$(ProjectName)$(TargetExt)</OutputFile>
@@ -269,6 +273,7 @@
       <TreatWarningAsError>true</TreatWarningAsError>
       <WarningLevel>Level4</WarningLevel>
       <WholeProgramOptimization>true</WholeProgramOptimization>
+      <ControlFlowGuard>Guard</ControlFlowGuard>
     </ClCompile>
     <Lib>
       <OutputFile>$(OutDir)lib\$(ProjectName)$(TargetExt)</OutputFile>
@@ -312,6 +317,7 @@
       <TreatWarningAsError>true</TreatWarningAsError>
       <WarningLevel>Level4</WarningLevel>
       <WholeProgramOptimization>true</WholeProgramOptimization>
+      <ControlFlowGuard>Guard</ControlFlowGuard>
     </ClCompile>
     <Lib>
       <OutputFile>$(OutDir)lib\$(ProjectName)$(TargetExt)</OutputFile>
@@ -335,7 +341,6 @@
       <PreprocessorDefinitions>ANGLE_STANDALONE_BUILD;ANGLE_X64_CPU;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
   </ItemDefinitionGroup>
-
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
     <ClCompile>
       <AdditionalIncludeDirectories>$(OutDir)obj\global_intermediate\angle;..\..\..\include;..\..\..\src;..\..\..\src\common\third_party\base;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -355,6 +360,7 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <TreatWarningAsError>true</TreatWarningAsError>
       <WarningLevel>Level4</WarningLevel>
+      <ControlFlowGuard>Guard</ControlFlowGuard>
     </ClCompile>
     <Lib>
       <OutputFile>$(OutDir)lib\$(ProjectName)$(TargetExt)</OutputFile>
@@ -399,6 +405,7 @@
       <TreatWarningAsError>true</TreatWarningAsError>
       <WarningLevel>Level4</WarningLevel>
       <WholeProgramOptimization>true</WholeProgramOptimization>
+      <ControlFlowGuard>Guard</ControlFlowGuard>
     </ClCompile>
     <Lib>
       <OutputFile>$(OutDir)lib\$(ProjectName)$(TargetExt)</OutputFile>
@@ -422,41 +429,40 @@
       <PreprocessorDefinitions>_ARM64_;ANGLE_STANDALONE_BUILD;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
   </ItemDefinitionGroup>
-  
   <ItemGroup>
-    <None Include="..\..\..\src\compiler\preprocessor\ExpressionParser.y"/>
-    <None Include="..\..\..\src\compiler\preprocessor\Tokenizer.l"/>
-    <None Include="..\..\..\src\angle.gyp"/>
+    <None Include="..\..\..\src\compiler\preprocessor\ExpressionParser.y" />
+    <None Include="..\..\..\src\compiler\preprocessor\Tokenizer.l" />
+    <None Include="..\..\..\src\angle.gyp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\src\compiler\preprocessor\DiagnosticsBase.h"/>
-    <ClInclude Include="..\..\..\src\compiler\preprocessor\DirectiveHandlerBase.h"/>
-    <ClInclude Include="..\..\..\src\compiler\preprocessor\DirectiveParser.h"/>
-    <ClInclude Include="..\..\..\src\compiler\preprocessor\ExpressionParser.h"/>
-    <ClInclude Include="..\..\..\src\compiler\preprocessor\Input.h"/>
-    <ClInclude Include="..\..\..\src\compiler\preprocessor\Lexer.h"/>
-    <ClInclude Include="..\..\..\src\compiler\preprocessor\Macro.h"/>
-    <ClInclude Include="..\..\..\src\compiler\preprocessor\MacroExpander.h"/>
-    <ClInclude Include="..\..\..\src\compiler\preprocessor\Preprocessor.h"/>
-    <ClInclude Include="..\..\..\src\compiler\preprocessor\SourceLocation.h"/>
-    <ClInclude Include="..\..\..\src\compiler\preprocessor\Token.h"/>
-    <ClInclude Include="..\..\..\src\compiler\preprocessor\Tokenizer.h"/>
-    <ClInclude Include="..\..\..\src\compiler\preprocessor\numeric_lex.h"/>
+    <ClInclude Include="..\..\..\src\compiler\preprocessor\DiagnosticsBase.h" />
+    <ClInclude Include="..\..\..\src\compiler\preprocessor\DirectiveHandlerBase.h" />
+    <ClInclude Include="..\..\..\src\compiler\preprocessor\DirectiveParser.h" />
+    <ClInclude Include="..\..\..\src\compiler\preprocessor\ExpressionParser.h" />
+    <ClInclude Include="..\..\..\src\compiler\preprocessor\Input.h" />
+    <ClInclude Include="..\..\..\src\compiler\preprocessor\Lexer.h" />
+    <ClInclude Include="..\..\..\src\compiler\preprocessor\Macro.h" />
+    <ClInclude Include="..\..\..\src\compiler\preprocessor\MacroExpander.h" />
+    <ClInclude Include="..\..\..\src\compiler\preprocessor\Preprocessor.h" />
+    <ClInclude Include="..\..\..\src\compiler\preprocessor\SourceLocation.h" />
+    <ClInclude Include="..\..\..\src\compiler\preprocessor\Token.h" />
+    <ClInclude Include="..\..\..\src\compiler\preprocessor\Tokenizer.h" />
+    <ClInclude Include="..\..\..\src\compiler\preprocessor\numeric_lex.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\src\compiler\preprocessor\DiagnosticsBase.cpp"/>
-    <ClCompile Include="..\..\..\src\compiler\preprocessor\DirectiveHandlerBase.cpp"/>
-    <ClCompile Include="..\..\..\src\compiler\preprocessor\DirectiveParser.cpp"/>
-    <ClCompile Include="..\..\..\src\compiler\preprocessor\ExpressionParser.cpp"/>
-    <ClCompile Include="..\..\..\src\compiler\preprocessor\Input.cpp"/>
-    <ClCompile Include="..\..\..\src\compiler\preprocessor\Lexer.cpp"/>
-    <ClCompile Include="..\..\..\src\compiler\preprocessor\Macro.cpp"/>
-    <ClCompile Include="..\..\..\src\compiler\preprocessor\MacroExpander.cpp"/>
-    <ClCompile Include="..\..\..\src\compiler\preprocessor\Preprocessor.cpp"/>
-    <ClCompile Include="..\..\..\src\compiler\preprocessor\Token.cpp"/>
-    <ClCompile Include="..\..\..\src\compiler\preprocessor\Tokenizer.cpp"/>
+    <ClCompile Include="..\..\..\src\compiler\preprocessor\DiagnosticsBase.cpp" />
+    <ClCompile Include="..\..\..\src\compiler\preprocessor\DirectiveHandlerBase.cpp" />
+    <ClCompile Include="..\..\..\src\compiler\preprocessor\DirectiveParser.cpp" />
+    <ClCompile Include="..\..\..\src\compiler\preprocessor\ExpressionParser.cpp" />
+    <ClCompile Include="..\..\..\src\compiler\preprocessor\Input.cpp" />
+    <ClCompile Include="..\..\..\src\compiler\preprocessor\Lexer.cpp" />
+    <ClCompile Include="..\..\..\src\compiler\preprocessor\Macro.cpp" />
+    <ClCompile Include="..\..\..\src\compiler\preprocessor\MacroExpander.cpp" />
+    <ClCompile Include="..\..\..\src\compiler\preprocessor\Preprocessor.cpp" />
+    <ClCompile Include="..\..\..\src\compiler\preprocessor\Token.cpp" />
+    <ClCompile Include="..\..\..\src\compiler\preprocessor\Tokenizer.cpp" />
   </ItemGroup>
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets"/>
-  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets"/>
-  <ImportGroup Label="ExtensionTargets"/>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  <ImportGroup Label="ExtensionTargets" />
 </Project>
